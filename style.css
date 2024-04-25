@@ -1,0 +1,154 @@
+/************ Default Setting's ************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --headline-color: #fff;
+    --font-color: #ccc;
+    --background-body: #221f2f;
+    --background-container: rgba(0, 0, 0, .44);
+    --gray-color: #999;
+
+
+    /* Jellyfish Color */
+    --yellow-color: #ce7e00;
+    --turquoise-color: #0c343d;
+    --purpl-color: #6a329f;
+    --bordeaux-color: #4c1130;
+    --winered-color:#660000; 	
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: var(--background-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 40rem;
+    color: var(--font-color);
+    background: var(--background-container);
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
+    backdrop-filter: blur(7.4);
+    -webkit-backdrop-filter: blur(7.4);
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    background-color: var(--bordeaux-color);
+    width: 120px;
+    height: 120px;
+    filter: blur(140px);
+    left: -20px;
+    top: 10%;
+    z-index: -1000;
+}
+
+.container::after{
+    content: "";
+    position: absolute;
+    background-color: var(--purpl-color);
+    width: 120px;
+    height: 120px;
+    filter: blur(140px);
+    right: -20px;
+    bottom: -10%;
+    z-index: -1000;
+    -webkit-filter: blur(140px);
+}
+
+h1{
+    color: var(--turquoise-color);
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p{
+    font-size: 14px;
+    color: var(--font-color);
+    line-height: 1.4rem;
+    text-align: justify;
+}
+
+
+
+/************ Formular ************/
+.gen-form{
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+    width: 100%;
+}
+
+input{
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    background-color: transparent;
+    color: var(--font-color);
+    border: 1px solid var(--gray-color);
+    transition: all .3s ease;
+
+    &:hover,
+    &:focus{
+        border-color: var(--turquoise-color);
+    }
+}
+
+button{
+    width: 20%;
+    height: 36px;
+    color: var(--yellow-color);
+    border: 1px solid var(--gray-color);
+    background: var(--background-body);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: .9rem;
+
+    transition: all .3s ease;
+
+    &:hover{
+        color: var(--font-color);
+        background: var(--turquoise-color);
+        border-color: transparent;
+    }
+}
+
+#loading{
+    display: none;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
